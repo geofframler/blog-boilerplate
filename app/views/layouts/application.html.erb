@@ -10,33 +10,10 @@
   </head>
 
   <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-      <div class="container">
-        <%= link_to "Blog", home_path, :class => "navbar-brand" %>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <div class="collapse navbar-collapse">
-          <ul class="navbar-nav me-auto mb-2 mb-sm-0">
-            <li class="nav-item">
-              <%= link_to "Home", home_path, :class => "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "About", about_path, :class => "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to "New Post", new_post_path, :class => "nav-link" %>
-            </li>
-          </ul>
-          <form>
-            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-          </form>
-        </div>
-      </div>
-    </nav>
-
+    <%= render 'shared/navbar' %>
     <div class="container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
       <%= yield %>
     </div>
   </body>
